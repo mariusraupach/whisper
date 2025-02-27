@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    stdin_open: true
+    tty: true
+    volumes:
+      - ..:/workspaces/whisper
